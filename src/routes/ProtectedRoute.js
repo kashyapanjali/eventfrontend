@@ -1,12 +1,25 @@
 /** @format */
+
 import React from "react";
 import { Navigate } from "react-router-dom";
 
-const ProtectedRoute = ({ children }) => {
-	// Check if the user is authenticated
+const ProtectedRoute = ({ children, requiredRole }) => {
 	const isAuthenticated = localStorage.getItem("isAuthenticated");
+	const userRole = localStorage.getItem("userRole");
 
-	return isAuthenticated ? children : <Navigate to="/register" />;
+	// Redirect if not authenticated
+	if (!isAuthenticated) {
+		return <Navigate to="/register" />;
+	}
+
+	// Redirect based on role
+	if (userRole !== requiredRole) {
+		return (
+			<Navigate to={userRole === "guest" ? "/dashboard" : "/create-event"} />
+		);
+	}
+
+	return children;
 };
 
 export default ProtectedRoute;

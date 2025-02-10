@@ -7,6 +7,7 @@ import CreateEvent from "./pages/CreateEvent";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ProtectedRoute from "./routes/ProtectedRoute"; // ✅ Import ProtectedRoute
+import GuestLogin from "./pages/GuestLogin";
 
 function App() {
 	return (
@@ -16,12 +17,12 @@ function App() {
 				{/* Public Routes */}
 				<Route path="/login" element={<Login />} />
 				<Route path="/register" element={<Register />} />
-
+				<Route path="/guestlogin" element={<GuestLogin />} />
 				{/* 🔹 Protected Routes */}
 				<Route
 					path="/dashboard"
 					element={
-						<ProtectedRoute>
+						<ProtectedRoute requiredRole="guest">
 							<Dashboard />
 						</ProtectedRoute>
 					}
@@ -29,7 +30,7 @@ function App() {
 				<Route
 					path="/create-event"
 					element={
-						<ProtectedRoute>
+						<ProtectedRoute requiredRole="user">
 							<CreateEvent />
 						</ProtectedRoute>
 					}

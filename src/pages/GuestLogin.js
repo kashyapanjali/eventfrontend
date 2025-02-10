@@ -3,22 +3,22 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Auth.css"; // ✅ Import Auth Styles
 
-const Login = () => {
+const GuestLogin = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const navigate = useNavigate();
 
-	const handleLogin = (e) => {
+	const handleGuestLogin = (e) => {
 		e.preventDefault();
 		localStorage.setItem("isAuthenticated", "true");
-		localStorage.setItem("userRole", "user"); // ✅ Save user role
-		navigate("/create-event"); // Redirect to event creation
+		localStorage.setItem("userRole", "guest"); // ✅ Save guest role
+		navigate("/dashboard"); // Redirect to dashboard
 	};
 
 	return (
 		<div className="auth-container">
-			<h2>Login</h2>
-			<form onSubmit={handleLogin} className="auth-form">
+			<h2>Guest Login</h2>
+			<form onSubmit={handleGuestLogin} className="auth-form">
 				<input
 					type="email"
 					placeholder="Email"
@@ -33,16 +33,10 @@ const Login = () => {
 					onChange={(e) => setPassword(e.target.value)}
 					required
 				/>
-				<button type="submit">Login</button>
+				<button type="submit">Guest Login</button>
 			</form>
-			<div className="auth-actions">
-				<button onClick={() => navigate("/register")}>Register</button>
-				<button className="guest-login" onClick={() => navigate("/guestlogin")}>
-					Guest Login
-				</button>
-			</div>
 		</div>
 	);
 };
 
-export default Login;
+export default GuestLogin;
