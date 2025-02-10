@@ -1,0 +1,112 @@
+/** @format */
+
+/* 🔹 Authentication Page Container */
+.auth-container {
+	width: 100%;
+	max-width: 400px;
+	margin: 50px auto;
+	padding: 25px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	transition: transform 0.3s ease-in-out;
+}
+
+.auth-container:hover {
+	transform: scale(1.02);
+}
+
+/* 🔹 Title Heading */
+.auth-container h2 {
+	color: #2563eb;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+/* 🔹 Form Styles */
+.auth-form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.auth-form input {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	font-size: 16px;
+	transition: border 0.3s ease-in-out;
+}
+
+.auth-form input:focus {
+	border-color: #2563eb;
+	outline: none;
+	box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+
+/* 🔹 Primary Button */
+.auth-form button {
+	width: 100%;
+	padding: 12px;
+	font-size: 16px;
+	font-weight: bold;
+	background: #2563eb;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background 0.3s ease-in-out;
+}
+
+.auth-form button:hover {
+	background: #1e3a8a;
+}
+
+/* 🔹 Secondary Actions */
+.auth-actions {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 12px;
+}
+
+/* 🔹 Alternative Buttons */
+.auth-actions button {
+	flex: 1;
+	padding: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	border: 1px solid #2563eb;
+	border-radius: 6px;
+	color: #2563eb;
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	margin: 5px;
+}
+
+.auth-actions button:hover {
+	background: #2563eb;
+	color: white;
+}
+
+/* 🔹 Guest Login Button */
+.guest-login {
+	background: #f59e0b;
+	color: white;
+	border: none;
+}
+
+.guest-login:hover {
+	background: #d97706;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 500px) {
+	.auth-container {
+		width: 90%;
+		padding: 20px;
+	}
+}

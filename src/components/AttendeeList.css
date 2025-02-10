@@ -1,0 +1,43 @@
+/** @format */
+
+/* Container styling */
+.attendee-list {
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 15px;
+	text-align: center;
+	width: 100%;
+	max-width: 300px;
+	margin: 10px auto;
+	transition: transform 0.2s ease-in-out;
+}
+
+.attendee-list:hover {
+	transform: scale(1.05);
+}
+
+/* Heading style */
+.attendee-list h3 {
+	color: #2563eb;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+}
+
+/* Loader animation */
+.attendee-list.loading {
+	animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+	0% {
+		opacity: 0.6;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.6;
+	}
+}
