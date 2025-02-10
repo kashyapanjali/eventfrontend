@@ -1,0 +1,91 @@
+/** @format */
+.event-details-container {
+	max-width: 600px;
+	margin: 30px auto;
+	padding: 20px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.event-details-container h1 {
+	color: #2563eb;
+	margin-bottom: 10px;
+}
+
+.event-details-container p {
+	margin: 10px 0;
+	font-size: 18px;
+}
+
+/* Update Section */
+.update-section {
+	margin: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+
+.update-section input {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+}
+
+.update-section button {
+	background: #2563eb;
+	color: white;
+	padding: 8px 12px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+.update-section button:hover {
+	background: #1e3a8a;
+}
+
+/* Attendee Section */
+.attendee-section {
+	margin: 20px 0;
+	text-align: left;
+}
+
+.attendee-section input {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+}
+
+.attendee-section ul {
+	list-style: none;
+	padding: 0;
+}
+
+.attendee-section li {
+	background: #f4f4f4;
+	margin: 5px 0;
+	padding: 8px;
+	border-radius: 6px;
+}
+
+/* Delete Button */
+.delete-button {
+	background: #ff4b4b;
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	margin-top: 20px;
+	transition: background 0.3s ease;
+}
+
+.delete-button:hover {
+	background: #c53030;
+}

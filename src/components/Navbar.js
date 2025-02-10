@@ -10,7 +10,7 @@ const Navbar = () => {
 				EventHub
 			</Link>
 			<div className="navbar-links">
-				<Link to="/dashboard">Dashboard</Link>
+				{/* <Link to="/dashboard">Dashboard</Link> */}
 				<Link to="/login">Login</Link>
 				<Link to="/register">Register</Link>
 			</div>

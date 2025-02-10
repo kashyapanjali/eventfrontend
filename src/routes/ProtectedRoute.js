@@ -14,9 +14,7 @@ const ProtectedRoute = ({ children, requiredRole }) => {
 
 	// Redirect based on role
 	if (userRole !== requiredRole) {
-		return (
-			<Navigate to={userRole === "guest" ? "/dashboard" : "/create-event"} />
-		);
+		return <Navigate to={userRole === "guest" ? "/register" : "/register"} />;
 	}
 
 	return children;

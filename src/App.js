@@ -6,8 +6,9 @@ import Dashboard from "./pages/Dashboard";
 import CreateEvent from "./pages/CreateEvent";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import ProtectedRoute from "./routes/ProtectedRoute"; // ✅ Import ProtectedRoute
 import GuestLogin from "./pages/GuestLogin";
+import ProtectedRoute from "./routes/ProtectedRoute";
+import ViewDetails from "./components/ViewDetails";
 
 function App() {
 	return (
@@ -18,7 +19,8 @@ function App() {
 				<Route path="/login" element={<Login />} />
 				<Route path="/register" element={<Register />} />
 				<Route path="/guestlogin" element={<GuestLogin />} />
-				{/* 🔹 Protected Routes */}
+
+				{/* 🔹 Private Routes for Dashboard & Create Event */}
 				<Route
 					path="/dashboard"
 					element={
@@ -35,6 +37,9 @@ function App() {
 						</ProtectedRoute>
 					}
 				/>
+
+				{/* Event Details Route (Accessible to All) */}
+				<Route path="/event/:id" element={<ViewDetails />} />
 			</Routes>
 		</Router>
 	);

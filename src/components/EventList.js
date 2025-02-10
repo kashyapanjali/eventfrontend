@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import "./EventList.css";
 
 const EventList = ({ events }) => {
-	// Get today's date
 	const today = new Date().toISOString().split("T")[0];
 
 	return (
