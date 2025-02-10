@@ -7,18 +7,51 @@
 	padding: 20px;
 }
 
+/* Event Card Styling */
 .event-card {
 	background: white;
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	padding: 15px;
 	text-align: center;
+	transition: transform 0.3s ease-in-out;
+	position: relative;
 }
 
-.event-card h3 {
-	color: #2563eb;
+.event-card:hover {
+	transform: scale(1.05);
 }
 
+/* Past Events - Slightly faded */
+.event-card.past {
+	opacity: 0.7;
+	background: #f4f4f4;
+}
+
+/* Event Status Label */
+.event-status {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 5px 10px;
+	border-radius: 6px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+/* Upcoming Event Label */
+.upcoming-label {
+	background: #2563eb;
+	color: white;
+}
+
+/* Past Event Label */
+.past-label {
+	background: #d1d5db;
+	color: black;
+}
+
+/* View Details Button */
 .view-details {
 	display: inline-block;
 	margin-top: 10px;
